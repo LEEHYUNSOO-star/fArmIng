@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <!--===================================================================================================-->
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>들어와라, 내땅에 - 주소검색</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  
+  <!--===================================================================================================-->
+  <!-- body -->
+  <body>
+    
+    <!------------------------------------------------------------------------------------------------------->
+    <!-- Header -->
+    <header>
+      <div class="logo-container">
+        <img src="image/logo.png" alt="로고" class="logo-image" />
+        <div>
+          <h1 class="site-title">들어와라, 내땅에</h1>
+          <p class="site-subtitle">comeon, my ground</p>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <nav class="nav-menu">
+          <a href="post_main.html" class="nav-button">문의</a>
+          <!-- ✅ 이 줄 추가 -->
+
+          <a
+            href="mypage.html"
+            class="nav-button profile-btn"
+            style="display: none"
+            >내 정보</a
+          >
+          <a href="#" class="nav-button logout-btn" style="display: none"
+            >로그아웃</a
+          >
+
+          <a href="login.html" class="nav-button login-btn">로그인</a>
+          <a href="signup.html" class="nav-button signup-btn">회원가입</a>
+        </nav>
+      </nav>
+
+      <!-- 로그인 버튼이 클릭되면 로그인 페이지로 이동 -->
+      <!-- <a href="post_main.html" class="nav-btn inquiry">문의</a>
+      <a href="mypage.html" class="nav-btn my-info">내정보</a>
+      <a href="logout_index.html" class="nav-btn logout">로그아웃</a> -->
+    </header>
+
+    <!------------------------------------------------------------------------------------------------------->
+    <!-- Main Content -->
+    <main>
+      <div class="background"></div>
+      <div class="search-container">
+        <img src="image/무제-2.png" alt="로고" class="logo-image" />
+
+        <div class="search-box">
+          
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <div class="search-type">
+              <select class="search-type-select">
+                <option>도로명/지번</option>
+                <option>지번</option>
+                <option>도로명</option>
+              </select>
+            </div>
+
+            <!-- input address -->
+            <!-- input tag 안에 value 값 지정하면 안되는거 같음. 지우니까 JS에서 값 받아와짐 -->
+            <input
+              type="text"
+              id="input_text_search"
+              class="search-input"
+              placeholder="지번 예시 : 경북특별자치도 은하군 홍길동 특정리 555"
+            />
+
+            <!-- search button -->
+            <button id="search_button_01" class="search_button" >
+              <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Filter Options -->
+          <div class="filter-options">
+            <select class="filter-select">
+              <option>제조</option>
+              <option>옵션 2</option>
+            </select>
+            <select class="filter-select">
+              <option>검지</option>
+              <option>옵션 2</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!------------------------------------------------------------------------------------------------------->
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <div class="logo">
+            <div class="logo-inner"></div>
+          </div>
+          <h1 class="site-title">들어와라, 내땅에</h1>
+          <span class="site-subtitle">community ground</span>
+        </div>
+
+        <div class="footer-links">
+          <span class="tech-support">기술 문의</span>
+          <div class="social-icons">
+            <svg
+              class="social-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+              ></path>
+            </svg>
+            <svg
+              class="social-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+
+            <a href="https://www.notion.so" target="_blank">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="3"
+                  ry="3"
+                  stroke="black"
+                  stroke-width="2"
+                  fill="white"
+                />
+                <path d="M6 7H18V17H6V7Z" stroke="black" stroke-width="2" />
+                <path d="M8 10H16" stroke="black" stroke-width="2" />
+                <path d="M8 13H16" stroke="black" stroke-width="2" />
+                <path d="M8 16H12" stroke="black" stroke-width="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="company-info">
+          <div>회사정보 내용</div>
+          <div>copyright@info.com</div>
+        </div>
+      </div>
+    </footer>
+
+    <!--===================================================================================================-->
+    <!-- script -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

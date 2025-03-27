@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <!--===================================================================================================-->
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>들어와라, 내땅에 - 토양 분석</title>
+    <link rel="stylesheet" href="css/02_crop_recommendation.css" />
+  </head>
+
+  <!--===================================================================================================-->
+  <!-- body -->
+  <body>
+    <div class="container">
+
+      <!------------------------------------------------------------------------------------------------------->
+      <!-- Header -->
+      <header class="header">
+        <div class="logo-container">
+          <div class="logo">
+            <!-- error ERR_NAME_NOT_RESOLVED -->
+            <img
+              src="image/logo.png"
+              alt="Logo"
+            />
+          </div>
+        </div>
+
+      </header>
+
+      <!------------------------------------------------------------------------------------------------------->
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Background Curves -->
+        <div class="background-curves">
+          <div class="curve-top"></div>
+          <div class="curve-bottom"></div>
+          <div class="red-curve"></div>
+        </div>
+
+        <!-- Location Info -->
+        <div id="text_box_01" class="location-info">
+          검색에 사용된 주소 string 값
+        </div>
+
+        <!-- Soil Analysis Table -->
+        <div class="soil-table-container">
+          <table class="soil-table">
+            <thead>
+              <tr>
+                <th>지번코드</th>
+                <th>토양검정일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="sn_01">None</td>
+                <td id="sn_02">None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="soil-table-container">
+          <table class="soil-table">
+            <thead>
+              <tr>
+                <th>pH 1:5</th>
+                <th>유기물(g/kg)</th>
+                <th>인산 (mg/kg)</th>
+                <th>칼륨 (cmol+/kg)</th>
+                <th>칼슘 (cmol+/kg)</th>
+                <th>마그네슘 (cmol+/kg)</th>
+                <th>전기도도 (dS/m)</th>
+                <th>규산 (mg/kg)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="sn_03">None</td>
+                <td id="sn_04">None</td>
+                <td id="sn_05">None</td>
+                <td id="sn_06">None</td>
+                <td id="sn_07">None</td>
+                <td id="sn_08">None</td>
+                <td id="sn_09">None</td>
+                <td id="sn_10">None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Crop Buttons -->
+        <div class="crop-buttons-container">
+          <div class="crop-row">
+            <button id="btn_crop_01" class="crop-btn">작물 1</button>
+            <p id="p_crop_01" class="p_crop"> reason </p>
+          </div>
+
+          <div class="crop-row">
+            <button id="btn_crop_02" class="crop-btn">작물 2</button>
+            <p id="p_crop_02" class="p_crop"> reason </p>
+          </div>
+
+          <div class="crop-row">
+            <button id="btn_crop_03" class="crop-btn">작물 3</button>
+            <p id="p_crop_03" class="p_crop"> reason </p>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <!-- 작물 선택 -->
+    <div class="dropdown-group">
+      <label for="category-select">대분류:</label>
+      <select id="category-select">
+        <option value="">-- 대분류 선택 --</option>
+      </select>
+    
+      <label for="crop-select">작물 선택:</label>
+      <select id="crop-select" disabled>
+        <option value="">-- 대분류 먼저 선택 --</option>
+      </select>
+    
+      <button id="loadCropData">정보 보기</button>
+    </div>
+    
+    <!-- 페이지 로드 -->
+    <iframe
+      id="crop-info-frame"
+      width="1150"
+      height="2000"
+      style="border: none; margin-top: 20px;"
+    ></iframe>
+
+    <!--===================================================================================================-->
+    <!-- script -->
+    <script src="js/02_crop_recommendation.js"></script>
+  </body>
+</html>
+
+
